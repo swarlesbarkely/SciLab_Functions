@@ -11,7 +11,7 @@ function discreteplot (n,y)
    a = get ('current_axes');
    a.x_location = 'origin';
    a.x_label.text = "n"
-   a.x_label.position = [max_n + 1,-1]
+   a.x_label.position = [max_n + 1,0]
    a.auto_scale = 'off';
    a.data_bounds = [min_n,min_y;max_n,max_y];
    a.zoom_box = [min_n,min_y,max_n,max_y];
