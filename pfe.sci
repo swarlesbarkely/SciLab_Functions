@@ -22,14 +22,18 @@ function pfe (expression)
 
     if k ~= 0 then
         disp (k);
+        mprintf ('\n\t+\n')
     end
 
     for index = 1: degree (d)
-        mprintf ('\n\t+\n')
         new_den_roots = den_roots;
         new_den_roots (index) = [];
         a = residu (n,x-den_roots (index),poly (new_den_roots,'x'));
-        disp (a / x-den_roots (index))
+        disp (a / (x-den_roots (index)))
+        
+        if index ~= degree (d) then mprintf ('\n\t+\n')
+        end
+        
     end
 
 endfunction
