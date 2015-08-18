@@ -18,7 +18,7 @@ function theta = angle (x, unit)
 
             elseif imag (x (i)) ~= 0 then theta (i) = 90*sign (imag (x (i)));
 
-            else theta (i) = [];
+            else theta (i) = [];	// Phase of 0 is undefined
             end
 
         end
@@ -36,7 +36,7 @@ function theta = angle (x, unit)
 
             elseif imag (x (i)) ~= 0 then theta (i) = %pi/2*sign (imag (x (i)));
 
-            else theta (i) = [];
+            else theta (i) = [];	// Phase of 0 is undefined
             end
 
         end

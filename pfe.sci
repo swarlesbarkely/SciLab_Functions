@@ -13,6 +13,7 @@ function pfe (expression)
 
     k = 0;
 
+	// Take special action if fraction is improper
     while degree (n) >= degree (d)
         [temp , n] = pdiv (n,d);
         k = k + temp;
@@ -21,17 +22,23 @@ function pfe (expression)
     den_roots = roots (d);
 
     if k ~= 0 then
+    	// Fraction was improper -- display what was factored out
         disp (k);
         mprintf ('\n\t+\n')
     end
 
+	// Print out result
     for index = 1: degree (d)
         new_den_roots = den_roots;
         new_den_roots (index) = [];
-        a = residu (n,x-den_roots (index),poly (new_den_roots,'x'));
-        disp (a / (x-den_roots (index)))
         
-        if index ~= degree (d) then mprintf ('\n\t+\n')
+        // Find residue at this root of the denominator
+        r = residu (n,x-den_roots (index),poly (new_den_roots,'x'));
+        disp (r / (x-den_roots (index)))
+        
+        if index ~= degree (d) then 
+        	// Not at the end --> Print a "+"
+        	mprintf ('\n\t+\n')
         end
         
     end
