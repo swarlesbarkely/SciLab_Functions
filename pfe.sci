@@ -11,6 +11,13 @@ function pfe (expression)
     n = numer (expression);
     d = denom (expression);
 
+	if degree (d) <= 0 then 
+		
+		mprintf ("Error! Degree of denominator cannot be 0")
+		abort
+		
+	end
+	
     k = 0;
 
 	// Take special action if fraction is improper
