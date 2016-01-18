@@ -19,6 +19,10 @@ Kronecker Delta function -- returns a vector the size of n which is 1 when n = 0
  
 Prints the partial fraction expansion of expression (always gives output in terms of x)
 
+* trainglewave (t, frequency)
+ 
+Returns a triangle wave signal the length of t which goes from -1 to 1 at the given frequency
+
 * ustep (t)
 
 Unit step function -- 1 for all t >= 0, 0 otherwise
