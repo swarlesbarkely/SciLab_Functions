@@ -15,6 +15,10 @@ Expansion on plot2d3 -- adds actual points to plot
 
 Kronecker Delta function -- returns a vector the size of n which is 1 when n = 0 and 0 otherwise
 
+* kpz (LinearSystem)
+ 
+Prints zeros, poles, and gain of continuous time linear system (similar to Matlab function zpk)
+
 * pfe (expression)
  
 Prints the partial fraction expansion of expression (always gives output in terms of x)

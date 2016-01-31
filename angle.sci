@@ -1,8 +1,12 @@
-//*****************************************
+//***************************************************
 // Returns the angle of a complex number
-// Call using angle (complex_number_or_matrix , unit)
-// Unit can either be "deg" or "d" for degrees or "rad" or "r" for radians
-//*****************************************
+//
+// Inputs:	x -- Vector of complex numbers
+//			unit -- 'rad' or 'r' for radians,
+//					'deg' or 'd' for degrees
+//
+// Returns:	Vector of angles
+//***************************************************
 
 function theta = angle (x, unit)
 
