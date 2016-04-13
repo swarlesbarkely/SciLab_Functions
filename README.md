@@ -30,3 +30,7 @@ Returns a triangle wave signal the length of t which goes from -1 to 1 at the gi
 * ustep (t)
 
 Unit step function -- 1 for all t >= 0, 0 otherwise
+
+* zlqr (A, B, Q, R)
+
+Returns the LQG feedback gains for the given system (similar to MatLab's lqr function)
